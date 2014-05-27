@@ -1,7 +1,7 @@
 % exp3, gait analysis
 clear all;clc;
 % import data and assign the interested Volt data to allVolts
-hugeData=lvmPlot('exp3_gait/crouch (1)');
+hugeData=lvm_import('exp3_gait/crouch (1)');
 % hugeData=lvmPlot('exp3_gait/walk (1)');
 
 
