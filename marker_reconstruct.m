@@ -1,5 +1,9 @@
 function marker_reconstruct(filename)
+
 % import csv data from exp 1,2 and plot
+% for example:
+% marker_reconstruct('Exp_2/somefile.csv')
+
 clf;close;
 % import data
 hugeData=csvread(filename,44,2);
