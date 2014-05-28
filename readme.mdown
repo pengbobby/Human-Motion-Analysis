@@ -1,0 +1,5 @@
+# Human Motion Analysis - A Report for Multiple Projects
+
+## Project 1: Upper Body Exercise
+
+![Touch Action Demo](Exp1_touch/demo_touch.gif)
