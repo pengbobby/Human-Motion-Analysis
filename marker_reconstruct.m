@@ -51,7 +51,7 @@ for i=1:duration
         grid on;
         axis([plotLimitX plotLimitY plotLimitZ]);
     end
-    pause(0.05);
+    pause(0.01);
 end
 
 end
