@@ -1,4 +1,5 @@
 function marker_reconstruct(filename)
+% import csv data from exp 1,2 and plot
 clf;close;
 % import data
 hugeData=csvread(filename,44,2);
@@ -38,6 +39,10 @@ plotLimitZ=get(gca,'ZLim');
 close;
 
 % plot in slow-mo
+
+windowSize=get(0,'ScreenSize');
+fig=figure('Position',[1 windowSize(4) windowSize(3) windowSize(4)]);
+
 plotColors=['ro';'go';'bo';'ko';'mo'];
 for i=1:duration
     for markerNo=1:markerCount
