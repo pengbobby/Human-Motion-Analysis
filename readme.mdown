@@ -2,4 +2,6 @@
 
 ## Project 1: Upper Body Exercise
 
+This is the reconstruction of the movement of all marker points, from [25b1.csv](Exp1_touch/25b1.csv)
+
 ![Touch Action Demo](Exp1_touch/demo_touch.gif)
