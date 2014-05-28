@@ -1,7 +1,6 @@
 function [time,markerData]=marker_reconstruct(filename)
 
-% import csv data from exp 1,2 and plot
-% To 
+% This function extract marker data from csv files in exp_1, exp_2
 % marker_reconstruct('Exp_2/somefile.csv')
 
 clf;close;
