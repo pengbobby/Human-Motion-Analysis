@@ -40,8 +40,16 @@ for i=[2 1]
     Tz(i,:)=Mz(i,:)-Fy(i,:).*ax(i,:)+Fx(i,:).*ay(i,:);
     
 end
-% plot COP in slow-mo
-for i=1:duration
-    plot(ax(1,i),ay(1,i));
-    pause(0.01);
-end
+% getting plot limits
+plot(ax(1,:),ay(1,:));
+% plotLimitX=get(gca,'XLim');
+% plotLimitY=get(gca,'YLim');
+% close;
+% % plot COP in slow-mo
+% 
+% for i=1:duration
+%     plot(ax(1,i),ay(1,i),'bo');
+%     axis([plotLimitX plotLimitY]);
+%     hold on;
+%     pause(0.01);
+% end
