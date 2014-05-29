@@ -17,4 +17,8 @@ delta_time_rep=repmat(delta_time,1,markerCount);
 velocity=delta_markerData'./delta_time_rep;
 
 % Calculate average velocity
-marker_position_change=
+markerDataDelta_abs=markerData-repmat(markerData(1:markerCount,1,:),1,duration);
+delta_markerData_abs=sqrt(...
+    sum(...
+    markerData.^2,3 ...
+))

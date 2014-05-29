@@ -7,4 +7,5 @@ addpath('/Users/timfeirg/Documents/Human Motion Analysis/Exp2/');
 
 [time,markerData]=marker_reconstruct('Exp2/0.5.csv');
 [v,avg]=marker_velocity(time,markerData);
-plot(avg)
+plot(avg(:,1))
+plot(v

@@ -1,7 +1,7 @@
 function [velocity, averageV]=marker_velocity(time,markerData)
 
 % This function calculates the velocity of each marker
-
+duration=size(time,1);
 markerCount=size(markerData,1);
 % duration=size(time,1);
 delta_time=diff(time);
@@ -17,4 +17,9 @@ delta_time_rep=repmat(delta_time,1,markerCount);
 velocity=delta_markerData'./delta_time_rep;
 
 % Calculate average velocity
-marker_position_change=markerData(
+markerDataDelta_abs=markerData-repmat(markerData(1:markerCount,1,:),1,duration);
+delta_markerData_abs=sqrt(...
+    sum(...
+    markerDataDelta_abs.^2,3 ...
+));
+averageV=delta_markerData_abs'./repmat(time,1,markerCount);
