@@ -27,3 +27,6 @@ if markerNo-1~=markerCount
     error('check num of markers!')
 end
 
+marker_plot(markerData);
+title(filename);
+saveas(gca,strcat(filename,'.png'));

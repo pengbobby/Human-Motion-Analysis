@@ -33,3 +33,4 @@ for i=1:duration
     %     pause(0.01);
 end
 legend('marker 1','marker 2','marker 3');
+save
