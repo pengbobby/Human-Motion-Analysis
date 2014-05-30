@@ -32,4 +32,5 @@ for i=1:duration
     end
     %     pause(0.01);
 end
-legend('marker 1','marker 2','marker 3');
+markerLegeng=['marker 1';'marker 2';'marker 3';'marker 4';'marker 5'];
+legend(markerLegeng(1:markerCount,:));

@@ -34,5 +34,4 @@ title(filename);
 saveas(gca,strcat(filename,'.png'));
 
 marker_velocity(time,markerData);
-title(strcat(filename,': Velocity'));
 saveas(gca,strcat(filename,'_velocity.png'));

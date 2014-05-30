@@ -26,6 +26,6 @@ delta_markerData_abs=sqrt(...
 averageV=delta_markerData_abs'./repmat(time-time(1,1),1,markerCount);
 velocity_graph=figure;
 plot(time(2:end),velocity);
-title('Velocity');
+
 markerLegeng=['marker 1';'marker 2';'marker 3';'marker 4';'marker 5'];
 legend(markerLegeng(1:markerCount,:));
