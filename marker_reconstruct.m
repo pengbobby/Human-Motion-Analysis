@@ -23,6 +23,7 @@ for i=4:hugeDataCol
         markerNo=markerNo+1;
     end
 end
+
 if markerNo-1~=markerCount
     error('check num of markers!')
 end
@@ -33,6 +34,7 @@ marker_plot(markerData);
 title(filename);
 saveas(gca,strcat(filename,'.png'));
 
-marker_velocity(time,markerData);
-title(strcat(filename,': Velocity'));
-saveas(gca,strcat(filename,'_velocity.png'));
+% % reserved for debug
+% marker_velocity(time,markerData);
+% title(strcat(filename,': Velocity'));
+% saveas(gca,strcat(filename,'_velocity.png'));

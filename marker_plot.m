@@ -16,21 +16,28 @@ plotLimitX=get(gca,'XLim');
 plotLimitY=get(gca,'YLim');
 plotLimitZ=get(gca,'ZLim');
 close;
-% plot in slow-mo
 
 windowSize=get(0,'ScreenSize');
 fig=figure('Position',[1 windowSize(4) windowSize(3) windowSize(4)]);
 
 plotColors=['ro';'go';'bo';'ko';'mo'];
-for i=1:duration
+
+% change plot range if too long
+if duration>=2000
     for markerNo=1:markerCount
-        plot3(markerData(markerNo,i,1),markerData(markerNo,i,2),markerData(markerNo,i,3),plotColors(markerNo,:));
+        plot3(markerData(markerNo,1:1000,1),markerData(markerNo,1:1000,2),markerData(markerNo,1:1000,3),plotColors(markerNo,:));
         hold on;
         grid on;
         axis([plotLimitX plotLimitY plotLimitZ]);
-        
     end
-    %     pause(0.01);
+else
+    for markerNo=1:markerCount
+        plot3(markerData(markerNo,:,1),markerData(markerNo,:,2),markerData(markerNo,:,3),plotColors(markerNo,:));
+        hold on;
+        grid on;
+        axis([plotLimitX plotLimitY plotLimitZ]);
+    end
 end
+
 markerLegeng=['marker 1';'marker 2';'marker 3';'marker 4';'marker 5'];
 legend(markerLegeng(1:markerCount,:));

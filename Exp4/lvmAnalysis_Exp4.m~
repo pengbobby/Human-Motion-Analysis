@@ -1,4 +1,4 @@
-function lvmAnalysis_Exp4(filename)
+function [time bicepsVolts tricepVolts forceData]=lvmAnalysis_Exp4(filename)
 % analysis for exp4
 
 hugeData=lvm_import('Exp4/1.lvm');
