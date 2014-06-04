@@ -1,4 +1,5 @@
 function [signal_fft,frequencyRange]=plot_fft(signal,frequency)
+
 % this function plots the FFT with corresponding frequency of the input
 % signal, and at the same time return the FFT and frequency bins.
 
