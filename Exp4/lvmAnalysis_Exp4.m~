@@ -12,13 +12,16 @@ plot(time,hugeData.Segment1.data(:,2:4));
 axis tight;
 title(strcat(filename,' on time domain'));
 legend('Biceps','Triceps','F');
-% saveas(timeGraph,strcat(filename,'.png'));
+saveas(timeGraph,strcat(filename,'_timeDomain.png'));
 
 % filter all data
 bicepsFiltered=determine_and_filter(bicepsVolts);
 tricepsFiltered=determine_and_filter(tricepsVolts);
+% calculate envelope
+bicepsEnv
 
-plot(time,[bicepsFiltered tricepsFiltered]);
+
+plot(time,[bicepsFiltered tricepsFiltered forceData]);
 axis tight;
 title(strcat(filename,' time domain, filtered'));
 legend('Biceps','Triceps');

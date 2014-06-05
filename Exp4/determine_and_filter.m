@@ -4,11 +4,11 @@ Fs=2000;
 freqGraph=figure;
 plot_fftshift(originalData,Fs);
 
-disp('determin Fstop')
+disp('determin Fpass')
 [Fpass y]=ginput;
 disp('Fstop = ');
 Fpass
-disp('determine Fpass');
+disp('determine Fstop');
 [Fstop y]=ginput;
 disp('Fpass = ');
 Fstop
